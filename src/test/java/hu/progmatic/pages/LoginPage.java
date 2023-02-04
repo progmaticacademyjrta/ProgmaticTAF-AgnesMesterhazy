@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class LoginPageSteps {
+public class LoginPage {
     WebDriver driver;
     WebDriverWait wait;
 
@@ -14,8 +14,9 @@ public class LoginPageSteps {
     By passwordFieldBy = By.cssSelector("[name='password']");
     By loginButtonBy = By.cssSelector("[type='submit']");
     By loginFailedMessageBy = By.className("text-danger");
+    By logoutTabBy = By.linkText("Logout");
 
-    public LoginPageSteps(WebDriver driver, WebDriverWait wait) {
+    public LoginPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
     }
@@ -32,8 +33,8 @@ public class LoginPageSteps {
 
         WebElement loginFailedMessage = driver.findElement(loginFailedMessageBy);
 
-        Assert.assertTrue(loginFailedMessage.isDisplayed());
-        System.out.println("Login failed message is displayed.");
+        Assert.assertEquals(loginFailedMessage.getText(), "Login failed! Please ensure the username and password are valid.");
+        System.out.println("The correct 'Login failed' message is displayed.");
     }
 
     public void validUsernameValidPasswordLogin() {
@@ -50,4 +51,9 @@ public class LoginPageSteps {
         System.out.println("Login was successful.");
     }
 
+    public void chooseLogout() {
+        WebElement logoutTab = driver.findElement(logoutTabBy);
+        logoutTab.click();
+        System.out.println("Logout was successful.");
+    }
 }

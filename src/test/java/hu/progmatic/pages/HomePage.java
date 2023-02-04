@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class HomePageSteps {
+public class HomePage {
     WebDriver driver;
     WebDriverWait wait;
     By headerBy = By.id("top");
@@ -16,7 +16,7 @@ public class HomePageSteps {
     By sidebarWrapperBy = By.id("sidebar-wrapper");
     By loginBy = By.xpath("//*[@id=\"sidebar-wrapper\"]/ul/li[3]/a");
 
-    public HomePageSteps(WebDriver driver, WebDriverWait wait) {
+    public HomePage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
     }
@@ -28,7 +28,7 @@ public class HomePageSteps {
         System.out.println("Homepage loaded properly.");
     }
 
-    public void checkMakeAppointmentButtonIsClickable() {
+    public void clickMakeAppointmentButton() {
         WebElement makeAppointmentButton = driver.findElement(makeAppointmentButtonBy);
         makeAppointmentButton.click();
         WebElement footerDisplay = driver.findElement(footerDisplayBy);

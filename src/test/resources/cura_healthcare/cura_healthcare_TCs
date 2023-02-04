@@ -1,0 +1,8 @@
+TC01: Homepage loaded test that loads the page and validates whether the header is displayed or not.
+TC02: Check that the appointment button is clickable.
+TC03: Login with wrong username and wrong password then good error message appears.
+TC04: Login with valid username and valid password then login is successful.
+TC05: Login and after logout from the page and it is success.
+TC06: Go to appointment page, fill date and comment data and book appointment which is successful.
+TC07: Open Hamburger menu, choose 'Profile' and the profile page is loaded successfully.
+TC08: End-to-end- Login, book an appointment, navigate to sign out and it is successful.

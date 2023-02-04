@@ -1,21 +1,21 @@
 package hu.progmatic.testcases;
 
 import hu.progmatic.driverfactory.DriverBaseTest;
-import hu.progmatic.pages.HomePageSteps;
-import hu.progmatic.pages.LoginPageSteps;
-import hu.progmatic.pages.ProfilPageSteps;
+import hu.progmatic.pages.HomePage;
+import hu.progmatic.pages.LoginPage;
+import hu.progmatic.pages.ProfilPage;
 import org.testng.annotations.Test;
 
 public class ProfilPageTests extends DriverBaseTest {
-    LoginPageSteps loginPage;
-    HomePageSteps homePage;
-    ProfilPageSteps profilPage;
+    LoginPage loginPage;
+    HomePage homePage;
+    ProfilPage profilPage;
 
-    @Test(description = "Open Hamburger menu, choose Profil and the profil page is loaded successfully.")
-    public void openProfilPage(){
-        homePage = new HomePageSteps(driver,wait);
-        loginPage = new LoginPageSteps(driver,wait);
-        profilPage = new ProfilPageSteps(driver);
+    @Test(description = "TC07: Open Hamburger menu, choose 'Profile' and the profile page is loaded successfully.", groups = {"smoke", "release", "regression"})
+    public void openProfilPage() {
+        homePage = new HomePage(driver, wait);
+        loginPage = new LoginPage(driver, wait);
+        profilPage = new ProfilPage(driver);
         homePage.loadHomePage();
         homePage.openHamburgerMenu();
         homePage.chooseLoginTab();
