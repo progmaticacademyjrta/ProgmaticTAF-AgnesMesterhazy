@@ -12,7 +12,7 @@ public class ProfilPageTests extends DriverBaseTest {
     ProfilPage profilPage;
 
     @Test(description = "TC07: Open Hamburger menu, choose 'Profile' and the profile page is loaded successfully.", groups = {"smoke", "release", "regression"})
-    public void openProfilPage() {
+    public void openProfilPageTest() {
         homePage = new HomePage(driver, wait);
         loginPage = new LoginPage(driver, wait);
         profilPage = new ProfilPage(driver);

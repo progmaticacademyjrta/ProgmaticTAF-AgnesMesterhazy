@@ -12,7 +12,7 @@ public class AppointmentPageTests extends DriverBaseTest {
     AppointmentPage makeAppointmentPage;
 
     @Test(description = "TC06: Go to appointment page, fill date and comment data and book appointment which is successful.", groups = {"smoke", "regression", "release"})
-    public void makeAppointment() throws InterruptedException {
+    public void makeAppointmentTest() throws InterruptedException {
         loginPage = new LoginPage(driver, wait);
         homePage = new HomePage(driver, wait);
         makeAppointmentPage = new AppointmentPage(driver, wait);

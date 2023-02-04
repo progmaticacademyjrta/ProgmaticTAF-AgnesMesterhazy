@@ -33,7 +33,7 @@ public class LoginPageTests extends DriverBaseTest {
     }
 
     @Test(description = "TC05: Login and after logout from the page and it is success.", groups = {"smoke", "regression", "release"})
-    public void logout() {
+    public void logoutTest() {
         loginPage = new LoginPage(driver, wait);
         homePage = new HomePage(driver, wait);
         homePage.loadHomePage();
