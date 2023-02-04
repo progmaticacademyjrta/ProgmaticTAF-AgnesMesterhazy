@@ -12,4 +12,8 @@ public class HomePageTests extends DriverBaseTest {
         homePage = new HomePage(driver, wait);
         homePage.loadHomePage();
     }
+    @Test(description = "TC02: Make appointment button is clickable.")
+    public void makeAppointmentButtonClickableTest(){
+
+    }
 }
